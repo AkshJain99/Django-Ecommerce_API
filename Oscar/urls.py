@@ -16,6 +16,8 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from oscar.app import application
+from oscarapi.app import application as api
+
 from rest_framework.urlpatterns import format_suffix_patterns
 from shop import views
 
@@ -23,5 +25,6 @@ from shop import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', application.urls),
-    path('Customer/', views.CustomerList.as_view()),
+    path('api/', api.urls),
+    path('Customer/<int:pk>', views.CustomerList.as_view(), name="customer_details"),
 ]

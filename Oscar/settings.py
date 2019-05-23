@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'widget_tweaks',
     'rest_framework',
     'shop',
+    'oscarapi',
 ] + get_core_apps()
 
 SITE_ID = 1
