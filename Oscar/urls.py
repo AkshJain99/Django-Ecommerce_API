@@ -17,7 +17,6 @@ from django.contrib import admin
 from django.urls import path, include
 from oscar.app import application
 from oscarapi.app import application as api
-
 from rest_framework.urlpatterns import format_suffix_patterns
 from shop import views
 
